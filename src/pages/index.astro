@@ -1,5 +1,5 @@
 ---
-// Component imports and setup JavaScript go here!
+import imgImported from "../images/astronaut.jpg";
 ---
 
 <html lang="en">
@@ -9,14 +9,14 @@
 	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 	<meta name="viewport" content="width=device-width" />
 	<title>Welcome to Astro</title>
-	<style>
-		/* scoped CSS styles go here: */
-		/* h1 { ... } */
-	</style>
 </head>
 
 <body>
 	<h1>Welcome to <a href="https://astro.build/">Astro</a></h1>
+
+	<p>Inspect the image and check its <code>data-src</code> attribute. The image url is unchanged. This is important when using something like <code><a href="https://www.npmjs.com/package/lazysizes">lazysizes</a></code> to lazy load images as they are about to come into view. I am aware I could use the Astro <code>client:visible</code> directive to achieve the same thing. That is however besides the point.</p>
+
+	<img src={imgImported} data-src={imgImported} />
 </body>
 
 </html>
